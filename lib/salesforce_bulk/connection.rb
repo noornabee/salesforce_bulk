@@ -45,9 +45,11 @@ module SalesforceBulk
 
       @session_id = response_parsed['Body'][0]['loginResponse'][0]['result'][0]['sessionId'][0]
       @server_url = response_parsed['Body'][0]['loginResponse'][0]['result'][0]['serverUrl'][0]
-      @instance = parse_instance()
+      #@instance = parse_instance()
 
-      @@INSTANCE_HOST = "#{@instance}.salesforce.com"
+      #@@INSTANCE_HOST = "#{@instance}.salesforce.com"
+      @@INSTANCE_HOST = 'https://mikit.my.salesforce.com'
+    
     end
 
     def post_xml(host, path, xml, headers)
