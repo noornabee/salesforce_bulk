@@ -61,6 +61,11 @@ module SalesforceBulk
         headers['X-SFDC-Session'] = @session_id;
         path = "#{@@PATH_PREFIX}#{path}"
       end
+      
+      puts "host #{host}"
+      puts "path #{path}"
+      puts "xml #{xml}"
+      puts "header #{headers}"
 
       https(host).post(path, xml, headers).body
     end
