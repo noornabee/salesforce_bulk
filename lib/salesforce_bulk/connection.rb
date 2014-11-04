@@ -53,10 +53,9 @@ module SalesforceBulk
       
       puts "server_url #{@server_url}"
       
-      #@instance = parse_instance()
+      @instance = parse_instance()
 
-      #@@INSTANCE_HOST = "#{@instance}.salesforce.com"
-      @@INSTANCE_HOST = 'mikit.my.salesforce.com'
+      @@INSTANCE_HOST = "#{@instance}.salesforce.com"
     
     end
 
@@ -103,10 +102,14 @@ module SalesforceBulk
         if $~.nil?
           raise "Unable to parse Salesforce instance from server url (#{@server_url})."
         else
-          @instance = $~.captures[0]
+          #@instance = $~.captures[0]
+          @instance = 'mikit.my'
+          
         end
       else
-        @instance = $~.captures[0]
+        #@instance = $~.captures[0]
+        @instance = 'mikit.my'
+        
       end
     end
 
