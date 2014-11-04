@@ -49,7 +49,7 @@ module SalesforceBulk
       #@instance = parse_instance()
 
       #@@INSTANCE_HOST = "#{@instance}.salesforce.com"
-      @@INSTANCE_HOST = 'https://eu1-api.salesforce.com'
+      @@INSTANCE_HOST = 'https://eu1.salesforce.com'
     
     end
 
