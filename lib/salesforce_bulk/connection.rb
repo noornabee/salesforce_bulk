@@ -56,7 +56,7 @@ module SalesforceBulk
       #@instance = parse_instance()
 
       #@@INSTANCE_HOST = "#{@instance}.salesforce.com"
-      @@INSTANCE_HOST = 'https://eu1.salesforce.com'
+      @@INSTANCE_HOST = 'https://mikit.my.salesforce.com'
     
     end
 
