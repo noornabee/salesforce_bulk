@@ -43,6 +43,8 @@ module SalesforceBulk
       response = post_xml(@@LOGIN_HOST, @@LOGIN_PATH, xml, headers)
       # response_parsed = XmlSimple.xml_in(response)
       response_parsed = parse_response response
+      
+      puts "response_parsed #{response_parsed}"
 
       @session_id = response_parsed['Body'][0]['loginResponse'][0]['result'][0]['sessionId'][0]
       @server_url = response_parsed['Body'][0]['loginResponse'][0]['result'][0]['serverUrl'][0]
